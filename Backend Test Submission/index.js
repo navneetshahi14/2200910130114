@@ -5,12 +5,15 @@ const app = express();
 import UrlRouter from "./routes/urlRoute.js"
 // const router = require("./routes/urlRoute");
 const PORT = process.env.PORTNo || 8000;
+import cors from 'cors'
 
 dotenv.config({quiet:true});
 
 ConnectDB()
 app.use(express.json());
+app.use(cors())
 app.use('/',UrlRouter);
+
 
 
 app.get('/',(req,res)=>{

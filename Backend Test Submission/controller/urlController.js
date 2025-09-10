@@ -58,3 +58,14 @@ export const originalUrl = async(req,res) => {
         console.log(err)
     }
 }
+
+export const getAllurl = async(req,res) => {
+    try{
+
+        const url = await UrlModel.find();
+        return res.json(url);
+
+    }catch(err){
+        console.log(err);
+    }
+}

@@ -1,9 +1,14 @@
-
+import MainBody from "./Components/MainBody"
+import Navbar from "./Components/Navbar"
+import './app.css'
 
 function App() {
   return (
     <>
-      <p>Helllo world</p>
+      <div>
+        <Navbar/>
+        <MainBody />
+      </div>
     </>
   )
 }
